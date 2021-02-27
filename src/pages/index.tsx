@@ -6,6 +6,8 @@ import { Profile } from '../components/Profile';
 import { ChallengeBox } from '../components/ChallengeBox';
 
 import styles from '../styles/pages/Home.module.css';
+import { countReset } from 'console';
+import { CountDownProvider } from '../contexts/CountDownContent';
 
 export default function Home() {
   return (
@@ -13,7 +15,10 @@ export default function Home() {
       <Head>
         <title>Início | Move.it</title>
       </Head>
+      
       <ExperienceBar />
+
+      <CountDownProvider>
       <section>
         <div>
           <Profile />
@@ -24,6 +29,8 @@ export default function Home() {
           <ChallengeBox />
         </div>
       </section>
+      </CountDownProvider>
+      
     </div>
   )
 }
