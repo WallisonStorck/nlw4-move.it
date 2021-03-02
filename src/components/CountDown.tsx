@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { CountDownContext } from '../contexts/CountDownContent';
+import { CountDownContext } from '../contexts/CountDownContext';
 import styles from '../styles/components/CountDown.module.css';
 
 
@@ -45,7 +45,7 @@ const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
             className={`${styles.countDownButton} ${styles.countDownButtonActive}`}
             onClick={resetCountDown}
             >
-            Abandonar um ciclo
+            Abandonar o ciclo
             </button>
           ) : (
             <button 
